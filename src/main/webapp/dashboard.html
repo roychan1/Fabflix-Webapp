@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>Employee Dashboard</title>
+</head>
+<body class="table-secondary" style="height:100vh;">
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="./dashboard.html">Employee Dashboard</a>
+        </div>
+    </div>
+</nav>
+<div class="container bg-white" style="height:100%;">
+    <h1 class="pt-3">Add a new star</h1>
+    <form class="form-inline my-2 my-lg-0" action="#" id="new-star" method="post">
+        <input class="form-control mr-sm-2" name="name" type="search" placeholder="name" aria-label="Search">
+        <input class="form-control mr-sm-2" name="birth-year" placeholder="birth year" type="number" min="1700" max="2023" step="1" aria-label="Search">
+        <button class="btn btn-dark my-2 my-sm-0" type="submit">Add</button>
+    </form>
+    <div class='mt-2 text-success' id='success-star' style='display: none'>Successfully added.</div>
+    <div class='mt-2 text-danger' id='fail-star' style='display: none'>Failed to add.</div>
+    <div class='mt-2 text-danger' id='name-fail-star' style='display: none'>Must include name.</div>
+    <div class='mt-2 text-dark' id='star-processed' style='display: none'></div>
+
+    <br>
+    <h1 class="pt-3">Add a new movie</h1>
+    <form class="form-inline my-2 my-lg-0" action="#" id="new-movie" method="post">
+        <input class="form-control mr-sm-2" name="title" type="search" placeholder="title" aria-label="Search">
+        <input class="form-control mr-sm-2" name="year" placeholder="year" type="number" min="2000" max="2023" aria-label="Search">
+        <input class="form-control mr-sm-2" name="director" type="search" placeholder="director" aria-label="Search">
+        <input class="form-control mr-sm-2" name="price" type="search" placeholder="price" aria-label="Search">
+        <input class="form-control mr-sm-2" name="star" type="search" placeholder="star" aria-label="Search">
+        <input class="form-control mr-sm-2" name="birth-year" placeholder="birth year" type="number" min="1700" max="2023" step="1" aria-label="Search">
+        <input class="form-control mr-sm-2" name="genre" type="search" placeholder="genre" aria-label="Search">
+        <button class="btn btn-dark my-2 my-sm-0" type="submit">Add</button>
+    </form>
+    <div class='mt-2 text-success' id='success-movie' style='display: none'>Successfully added.</div>
+    <div class='mt-2 text-danger' id='fail-movie' style='display: none'>Failed to add.</div>
+    <div class='mt-2 text-danger' id='requirement-fail-movie' style='display: none'>Must include all movie requirements.</div>
+    <div class='mt-2 text-dark' id='movie-processed' style='display: none'></div>
+
+    <h1 class="pt-3">Metadata</h1>
+    <div class="table-responsive">
+        <table id="db_list_table" class="table table-striped">
+            <thead>
+            <tr>
+                <th>Table</th>
+                <th>Columns(type)</th>
+            </tr>
+            </thead>
+            <tbody id="db_list_table_body"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<script src="./dashboard.js"></script>
+
+</body>
+</html>
