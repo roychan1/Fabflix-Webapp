@@ -1,7 +1,6 @@
-# cs122b-fall-team-2
-cs122b-fall-team-2 created by GitHub Classroom
+# Fabflix-Webapp
 
-### Members: Angeline Pho & Chun Hong (Roy) Chan
+### Members: Angeline Pho (@angelinepho) & Chun Hong (Roy) Chan (@roychan1)
 
 ### source code:
 - src/main/java/
